@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OutLand Power and Turf Gallery — View our equipment, showroom, and products.">
+  <title>Gallery | OutLand Power and Turf</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="OutLand Power and Turf Logo">
+        <div class="nav-logo-text">
+          OutLand Power & Turf
+          <span>Powering the Great Outdoors</span>
+        </div>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products &amp; Services</a>
+        <a href="used-items.html">Used Items</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="nav-cta">Contact Us</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <p class="section-subtitle">Take a Look</p>
+      <h1>Gallery</h1>
+      <p>Our showroom, equipment, and products</p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="gallery-grid fade-in" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+        <div class="gallery-item">
+          <img src="images/husqvarna-showroom.jpg" alt="Husqvarna Outdoor Equipment Range">
+          <div class="gallery-item-overlay"><span>Husqvarna Equipment Range</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/total-tools.jpg" alt="Total Tools Display">
+          <div class="gallery-item-overlay"><span>Total Tools Display</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/showroom-vehicles.png" alt="Utility Vehicles and Showroom">
+          <div class="gallery-item-overlay"><span>Utility Vehicles &amp; Showroom</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/signage.jpg" alt="OutLand Power and Turf Location Sign">
+          <div class="gallery-item-overlay"><span>Our Location — JC Court</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/logo.png" alt="OutLand Power and Turf Brand">
+          <div class="gallery-item-overlay"><span>OutLand Power &amp; Turf</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="fade-in">
+        <h2>Want to see more?</h2>
+        <p>Visit our showroom at 9 Jakarand Street, Jeffreys Bay.</p>
+        <a href="contact.html" class="btn btn-orange">Get Directions →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="OutLand Logo">
+          <p>OutLand Power and Turf (Pty) Ltd<br>Powering the Great Outdoors</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/OutLand" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products &amp; Services</a></li>
+            <li><a href="used-items.html">Used Items</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Power Equipment</a></li>
+            <li><a href="products.html">Turf Solutions</a></li>
+            <li><a href="products.html">Maintenance &amp; Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>9 Jakarand Street<br>Jeffreys Bay, 6330</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <a href="tel:0828028079">082 802 8079</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <a href="mailto:jean@outlandpt.co.za">jean@outlandpt.co.za</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 OutLand Power and Turf (Pty) Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-nav lightbox-prev">&#8249;</span>
+    <span class="lightbox-nav lightbox-next">&#8250;</span>
+    <img src="" alt="Gallery Image">
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
