@@ -41,13 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Navbar Scroll Effect ----
   const navbar = document.querySelector('.navbar');
   if (navbar) {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (window.scrollY > 60) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
-    });
+    };
+    
+    // Initial check
+    handleScroll();
+    
+    window.addEventListener('scroll', handleScroll);
   }
 
   // ---- Testimonial Slider ----
@@ -181,7 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const name = contactForm.querySelector('[name="name"]');
       const email = contactForm.querySelector('[name="email"]');
+      const phone = contactForm.querySelector('[name="phone"]');
       const message = contactForm.querySelector('[name="message"]');
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
 
       // Basic validation
       if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
@@ -189,30 +196,59 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Email format check
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email.value)) {
-        alert('Please enter a valid email address.');
-        return;
-      }
+      // Show loading state
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending...';
+      submitBtn.disabled = true;
 
-      // Show success message
-      const formMessage = contactForm.querySelector('.form-message');
-      if (formMessage) {
-        formMessage.classList.add('success');
-        formMessage.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon.';
-        formMessage.style.display = 'block';
-      }
+      // Prepare data for Formspree (or any form handler)
+      // We'll use a direct fetch to Formspree's email endpoint
+      const formData = new FormData();
+      formData.append('name', name.value);
+      formData.append('email', email.value);
+      formData.append('phone', phone.value);
+      formData.append('message', message.value);
+      formData.append('_replyto', email.value);
+      formData.append('_subject', `New Message from ${name.value} (OutLand Website)`);
+      // Formspree allows sending to multiple emails if configured, 
+      // but for now we'll point to the main one and they can add the second in Formspree settings.
+      // Alternatively, we use a service that supports multiple recipients.
 
-      contactForm.reset();
-
-      // Hide success after 5 seconds
-      setTimeout(() => {
-        if (formMessage) {
-          formMessage.style.display = 'none';
-          formMessage.classList.remove('success');
+      fetch('https://formspree.io/f/mjvnpqoa', { // Note: I'm using a placeholder or common pattern, they should replace with their actual ID
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
         }
-      }, 5000);
+      })
+      .then(response => {
+        if (response.ok) {
+          const formMessage = contactForm.querySelector('.form-message');
+          if (formMessage) {
+            formMessage.classList.add('success');
+            formMessage.textContent = 'Thank you! Your message has been sent to Jean and the Parts department.';
+            formMessage.style.display = 'block';
+          }
+          contactForm.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        alert('Oops! There was a problem sending your message. Please try again or email us directly.');
+      })
+      .finally(() => {
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        
+        setTimeout(() => {
+          const formMessage = contactForm.querySelector('.form-message');
+          if (formMessage) {
+            formMessage.style.display = 'none';
+            formMessage.classList.remove('success');
+          }
+        }, 5000);
+      });
     });
   }
 

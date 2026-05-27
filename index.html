@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="OutLand Power and Turf — Premium outdoor power equipment, turf solutions, and expert service in Jeffreys Bay.">
   <title>OutLand Power and Turf | Powering the Great Outdoors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/logo.png" type="image/png">
 </head>
@@ -39,86 +42,289 @@
   <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="images/total-tools.jpg" alt="OutLand Power and Turf Equipment">
+  <section class="hero-v2" id="hero">
+    <div class="hero-v2-bg">
+      <img src="images/hero-bg.png" alt="OutLand Power and Turf Equipment">
     </div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <p class="section-subtitle">Welcome to OutLand</p>
-      <h1>OutLand Power and Turf</h1>
-      <p class="hero-tagline">Powering the Great Outdoors</p>
-      <p>Premium outdoor power equipment, turf solutions, and expert service you can trust in Jeffreys Bay.</p>
-      <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-primary">Contact Us →</a>
-        <a href="products.html" class="btn btn-white">Our Services</a>
+    <div class="hero-v2-overlay"></div>
+
+    <div class="hero-v2-grid-lines" aria-hidden="true">
+      <div class="hero-grid-line"></div>
+      <div class="hero-grid-line"></div>
+      <div class="hero-grid-line"></div>
+    </div>
+
+    <div class="container hero-v2-inner">
+      <div class="hero-v2-content">
+        <h1 class="hero-v2-title">
+          <span class="hero-title-line">Outdoor Equipment, Tools</span>
+          <span class="hero-title-line hero-title-accent">&amp; Transport Solutions</span>
+          <span class="hero-title-line">You Can Trust</span>
+        </h1>
+
+        <p class="hero-v2-desc">
+          Serving homeowners, farmers, and businesses with quality equipment, trusted brands, and reliable after-sales support.
+        </p>
+
+        <div class="hero-v2-buttons">
+          <a href="#what-we-offer" class="btn btn-hero-primary" id="hero-cta-products">
+            Explore Solutions
+          </a>
+          <a href="contact.html" class="btn btn-hero-outline" id="hero-cta-contact">
+            Contact Us
+          </a>
+        </div>
       </div>
+    </div>
+
+    <div class="hero-v2-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
     </div>
   </section>
 
-  <!-- About Preview Section -->
-  <section class="section" id="about-preview">
-    <div class="container">
-      <div class="about-preview fade-in">
-        <div class="about-preview-img">
-          <img src="images/showroom-vehicles.png" alt="OutLand Showroom">
+  <!-- Short Who We Are Section -->
+  <section class="section" id="who-we-are-short">
+    <div class="container text-center fade-in">
+      <p class="section-subtitle">Who We Are</p>
+      <h2 class="section-title">Your Local Equipment Partner</h2>
+      <p class="section-desc">OutLand Power and Turf (Pty) Ltd is dedicated to bringing you the best in outdoor power equipment, tools, and support.</p>
+      
+      <div class="who-we-are-cards">
+        <div class="who-card">
+          <div class="who-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <h3>Based in Jeffreys Bay</h3>
         </div>
-        <div class="about-preview-text">
-          <p class="section-subtitle">Who We Are</p>
-          <h2 class="section-title">Your Local Outdoor Equipment Specialists</h2>
-          <p>OutLand Power and Turf (Pty) Ltd is a trusted supplier of outdoor power equipment and turf solutions based in Jeffreys Bay.</p>
-          <p>We are passionate about helping homeowners, landscapers, and businesses maintain beautiful outdoor spaces with reliable equipment and expert service.</p>
-          <p><strong>Our goal is simple:</strong> Provide quality products, honest advice, and dependable support to every customer.</p>
-          <a href="about.html" class="btn btn-outline">Learn More →</a>
+        <div class="who-card">
+          <div class="who-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <h3>Equipment, Tools, &amp; Transport</h3>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products & Services Preview -->
-  <section class="section section-alt" id="services-preview">
-    <div class="container text-center">
-      <p class="section-subtitle">What We Offer</p>
-      <h2 class="section-title">Products &amp; Services</h2>
-      <p class="section-desc">Quality equipment and expert service for all your outdoor needs.</p>
-
-      <div class="services-grid">
-        <div class="service-card fade-in">
-          <div class="service-card-img">
-            <img src="images/husqvarna-showroom.jpg" alt="Power Equipment">
+        <div class="who-card">
+          <div class="who-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
-          <div class="service-card-body">
-            <h3>Power Equipment</h3>
-            <p>High quality outdoor equipment built to perform.</p>
-            <a href="products.html" class="service-card-link">Learn More →</a>
-          </div>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-card-img">
-            <img src="images/showroom-vehicles.png" alt="Turf Solutions">
-          </div>
-          <div class="service-card-body">
-            <h3>Turf Solutions</h3>
-            <p>Everything you need to create and maintain healthy lawns.</p>
-            <a href="products.html" class="service-card-link">Learn More →</a>
-          </div>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-card-img">
-            <img src="images/total-tools.jpg" alt="Maintenance & Support">
-          </div>
-          <div class="service-card-body">
-            <h3>Maintenance &amp; Support</h3>
-            <p>Reliable service to keep your equipment running smoothly.</p>
-            <a href="products.html" class="service-card-link">Learn More →</a>
-          </div>
+          <h3>Honest Advice &amp; Relationships</h3>
         </div>
       </div>
-
       <div style="margin-top: 48px;">
-        <a href="products.html" class="btn btn-primary">View Services →</a>
+        <a href="about.html" class="btn btn-outline">Read More About Us →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products & Services Section -->
+  <section class="section section-alt" id="what-we-offer">
+    <div class="container">
+      <div class="text-center fade-in">
+        <p class="section-subtitle">What We Offer</p>
+        <h2 class="section-title">Products &amp; Services</h2>
+        <p class="section-desc">Outdoor power equipment, transport solutions, tools, and expert support — all in one place.</p>
+      </div>
+
+      <div class="ps-grid">
+
+        <!-- Garden & Turf -->
+        <div class="ps-card fade-in" id="ps-garden">
+          <img src="images/garden-turf.png" alt="Garden & Turf Equipment" class="ps-card-img">
+          <div class="ps-card-header">
+            <div class="ps-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h3>Garden &amp; Turf Equipment</h3>
+              <p class="ps-card-tagline">Big range of garden and turf maintenance equipment.</p>
+            </div>
+          </div>
+          <ul class="ps-card-list">
+            <li>Lawnmowers</li>
+            <li>Brushcutters</li>
+            <li>Chainsaws</li>
+            <li>Hedge trimmers</li>
+            <li>Leaf blowers</li>
+            <li>Water pumps</li>
+            <li>Garden tractors</li>
+          </ul>
+          <a href="garden-turf.html" class="ps-card-link">View Product <span>→</span></a>
+        </div>
+
+        <!-- Forestry & Land Clearing -->
+        <div class="ps-card fade-in" id="ps-forestry">
+          <img src="images/forestry-clearing-shop.png" alt="Forestry & Land Clearing" class="ps-card-img">
+          <div class="ps-card-header">
+            <div class="ps-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L12 14l-3 8h10l-1-8 3-4-4-2z"/><path d="M12 2v6"/><path d="M8 6l4-4 4 4"/></svg>
+            </div>
+            <div>
+              <h3>Forestry &amp; Land Clearing</h3>
+              <p class="ps-card-tagline">Professional forestry equipment, pruning tools, chainsaws, and heavy-duty clearing solutions.</p>
+            </div>
+          </div>
+          <ul class="ps-card-list">
+            <li>Professional chainsaws</li>
+            <li>Pole pruners</li>
+            <li>Wood chippers</li>
+            <li>Clearing saws</li>
+            <li>Tree pruning equipment</li>
+            <li>Land clearing solutions</li>
+          </ul>
+          <a href="forestry-clearing.html" class="ps-card-link">View Product <span>→</span></a>
+        </div>
+
+        <!-- Motorcycles & Transport -->
+        <div class="ps-card fade-in" id="ps-transport">
+          <img src="images/transport.png" alt="Motorcycles & Transport Solutions" class="ps-card-img">
+          <div class="ps-card-header">
+            <div class="ps-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h2m10 0h2M2 9l3-6h14l3 6"/><path d="M2 9h20v8H2z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg>
+            </div>
+            <div>
+              <h3>Motorcycles &amp; Transport Solutions</h3>
+              <p class="ps-card-tagline">Everyday mobility options.</p>
+            </div>
+          </div>
+          <ul class="ps-card-list">
+            <li>Motorcycles</li>
+            <li>Electric scooters</li>
+            <li>Utility vehicles</li>
+            <li>Delivery transport solutions</li>
+            <li>Petrol, diesel and electric mobility solutions</li>
+          </ul>
+          <a href="transport.html" class="ps-card-link">View Product <span>→</span></a>
+        </div>
+
+        <!-- Tools & Workshop -->
+        <div class="ps-card fade-in" id="ps-tools">
+          <img src="images/tools.png" alt="Tools & Workshop Equipment" class="ps-card-img">
+          <div class="ps-card-header">
+            <div class="ps-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div>
+              <h3>Tools &amp; Workshop Equipment</h3>
+            </div>
+          </div>
+          <ul class="ps-card-list">
+            <li>Power tools – Cordless/Battery and Electric</li>
+            <li>Hand tools</li>
+            <li>Tool storage</li>
+            <li>Compressors</li>
+            <li>Workshop equipment</li>
+            <li>DIY and professional tools</li>
+          </ul>
+          <a href="tools.html" class="ps-card-link">View Product <span>→</span></a>
+        </div>
+
+        <!-- Battery & Electric Solutions -->
+        <div class="ps-card fade-in" id="ps-battery">
+          <img src="images/battery-electric.png" alt="Battery & Electric Solutions" class="ps-card-img">
+          <div class="ps-card-header">
+            <div class="ps-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            </div>
+            <div>
+              <h3>Battery &amp; Electric Solutions</h3>
+              <p class="ps-card-tagline">Clean, emission-free power.</p>
+            </div>
+          </div>
+          <ul class="ps-card-list">
+            <li>Battery-powered mowers and trimmers</li>
+            <li>Electric chainsaws and blowers</li>
+            <li>High-capacity commercial batteries</li>
+            <li>Eco-friendly Pellenc systems</li>
+          </ul>
+          <a href="battery-electric.html" class="ps-card-link">View Product <span>→</span></a>
+        </div>
+
+        <!-- Parts, Repairs & Workshop -->
+        <div class="ps-card fade-in" id="ps-repairs">
+          <img src="images/repairs.png" alt="Parts, Repairs & Workshop Services" class="ps-card-img">
+          <div class="ps-card-header">
+            <div class="ps-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <div>
+              <h3>Parts, Repairs &amp; Workshop Services</h3>
+            </div>
+          </div>
+          <ul class="ps-card-list">
+            <li>Spare parts</li>
+            <li>Equipment servicing</li>
+            <li>Repairs and maintenance</li>
+            <li>Technical support</li>
+            <li>Diagnostic inspections</li>
+            <li>Warranty support</li>
+          </ul>
+          <a href="parts-repairs.html" class="ps-card-link">View Product <span>→</span></a>
+        </div>
+
+      </div>
+
+      <div class="text-center fade-in" style="margin-top: 56px;">
+        <a href="products.html" class="btn btn-primary">Products and Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands We Supply -->
+  <section class="section section-dark" id="brands">
+    <div class="container text-center fade-in">
+      <p class="section-subtitle">Trusted Partners</p>
+      <h2 class="section-title text-white">Brands We Supply</h2>
+      <div class="brands-grid">
+        <a href="https://www.husqvarna.com/za/" target="_blank" rel="noopener noreferrer" class="brand-logo-text">Husqvarna</a>
+        <a href="https://pellencsouthafrica.co.za/?srsltid=AfmBOorDb4Qvcz5QIi4TLPtNqeLdgJWK3pJz7zH-6Op6yrCuxLZX15WU" target="_blank" rel="noopener noreferrer" class="brand-logo-text">Pellenc</a>
+        <a href="https://totaltoolsonline.co.za/?gad_source=1&gad_campaignid=23780715076&gbraid=0AAAABDdbndjaM3ajn8o0pZav4e0J6uuhd&gclid=Cj0KCQjw_IXQBhCkARIsADqELbJdfUUSVOdrC7eyZ9twdL7-QbhxzaI8Y2oajh8TBp-s-kOV1YYsn54aAmc8EALw_wcB" target="_blank" rel="noopener noreferrer" class="brand-logo-text">Total Tools</a>
+        <a href="https://ultrascooter.co.za/?utm_campaign=gs-2024-12-18&utm_source=google&utm_medium=pmax_shopping&gad_source=1&gad_campaignid=22034459661&gbraid=0AAAABDdbndjaM3ajn8o0pZav4e0J6uuhd&gclid=Cj0KCQjw_IXQBhCkARIsADqELbLWveaS6o6o5OpMcX6MqhTk_LZDSI_9-hv7Ik_gyJmEBSOXB1ASTz4aAqdxEALw_wcB" target="_blank" rel="noopener noreferrer" class="brand-logo-text">Ultra Scooter</a>
+        <a href="https://www.samotorcycles.co.za/commercial?gad_source=1&gad_campaignid=7704291830&gbraid=0AAAAACnItTWcvmkDbq5G8pK6ZfkA6MAIS&gclid=Cj0KCQjw_b_QBhCSARIsAP6hR4d0Ldob98mvRE7JIjP9q-EEKnPkWZ9Ll9cwm-ibzPzLnXj3JDt1g44aAl_jEALw_wcB" target="_blank" rel="noopener noreferrer" class="brand-logo-text">SAM</a>
+        <a href="https://www.multipowerimports.co.za/" target="_blank" rel="noopener noreferrer" class="brand-logo-text">Multi Power</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose OutLand -->
+  <section class="section" id="why-choose">
+    <div class="container text-center fade-in">
+      <p class="section-subtitle">Our Promise</p>
+      <h2 class="section-title">Why Choose OutLand</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 12 3a4.65 4.65 0 0 0-4.5 8.5c.76.76 1.23 1.52 1.41 2.5"></path></svg>
+          </div>
+          <h3>Expert Advice, Not Just Sales</h3>
+          <p>We take the time to understand your needs and recommend the best solutions.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h3>Quality Trusted Brands</h3>
+          <p>We only stock reputable equipment that guarantees longevity and performance.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h3>Home, Farm &amp; Business</h3>
+          <p>Versatile solutions tailored perfectly for residential, agricultural, or commercial use.</p>
+        </div>
+        <div class="why-card why-card-large">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3>Full After-Sales Support</h3>
+          <p>Our relationship doesn't end at the sale. We offer complete support:</p>
+          <ul class="why-list">
+            <li>Repairs &amp; Servicing</li>
+            <li>Spare Parts Supply</li>
+            <li>Maintenance Support</li>
+            <li>Technical Advice</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -160,30 +366,29 @@
     <div class="container text-center">
       <p class="section-subtitle">What Our Customers Say</p>
       <h2 class="section-title">Customer Reviews</h2>
-      <p class="section-desc">We're proud to serve the Jeffreys Bay community with reliable products and friendly service.</p>
+      <div class="rating-summary" style="margin-top: 16px;">
+        <span style="font-size: 2.5rem; font-weight: 800; color: var(--white);">4.5</span>
+        <div class="testimonial-stars" style="display: inline-block; margin: 0 10px; font-size: 1.5rem;">★★★★★</div>
+        <p style="color: var(--text-light); font-size: 0.9rem;">Based on 2 Google Reviews</p>
+      </div>
+      <p style="margin-top: 24px;">We value every customer and their feedback</p>
 
       <div class="testimonial-slider fade-in">
         <div class="testimonial-track">
           <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <blockquote>"Fantastic service and great advice. Highly recommended."</blockquote>
-            <cite>— Happy Customer</cite>
+            <div class="testimonial-stars">★★★★☆</div>
+            <blockquote>"Very good service!"</blockquote>
+            <cite>— Francois Van Zyl</cite>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <blockquote>"Quality equipment and friendly staff. Always a pleasure doing business with OutLand."</blockquote>
-            <cite>— Satisfied Client</cite>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <blockquote>"Professional advice and top-notch equipment. Wouldn't go anywhere else!"</blockquote>
-            <cite>— Loyal Customer</cite>
+            <blockquote>"Excellent experience with OutLand Power and Turf."</blockquote>
+            <cite>— Melanie Nel</cite>
           </div>
         </div>
         <div class="testimonial-dots">
           <button class="testimonial-dot active" aria-label="Slide 1"></button>
           <button class="testimonial-dot" aria-label="Slide 2"></button>
-          <button class="testimonial-dot" aria-label="Slide 3"></button>
         </div>
       </div>
     </div>
@@ -208,7 +413,7 @@
           <img src="images/logo.png" alt="OutLand Logo">
           <p>OutLand Power and Turf (Pty) Ltd<br>Powering the Great Outdoors</p>
           <div class="footer-social">
-            <a href="https://www.facebook.com/OutLand" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://www.facebook.com/people/OutLand/61581158473050/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
           </div>
         </div>
         <div>
@@ -245,6 +450,14 @@
             <span class="footer-contact-icon">✉️</span>
             <a href="mailto:jean@outlandpt.co.za">jean@outlandpt.co.za</a>
           </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">⚙️</span>
+            <a href="mailto:parts@outlandpt.co.za">parts@outlandpt.co.za</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">🕒</span>
+            <span>Mon-Fri: 07:30-17:00<br>Sat: 07:30-13:00</span>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -252,14 +465,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <span class="lightbox-nav lightbox-prev">&#8249;</span>
-    <span class="lightbox-nav lightbox-next">&#8250;</span>
-    <img src="" alt="Gallery Image">
-  </div>
 
   <script src="main.js"></script>
 </body>
