@@ -2671,19 +2671,28 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     display: none !important;
   }
 
-  /* Products & Services horizontal scroll */
+  /* ---- Who We Are Cards: stack all 3 vertically ---- */
+  .who-we-are-cards {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .who-card {
+    padding: 24px 20px;
+  }
+
+  /* ---- Products & Services horizontal scroll ---- */
   .ps-grid {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory;
     gap: 16px !important;
-    padding-bottom: 24px;
     -webkit-overflow-scrolling: touch;
-    /* remove the default grid styles */
     grid-template-columns: none !important;
-    margin: 0 -24px; /* break out of container padding */
-    padding: 0 24px 24px 24px; /* restore padding */
+    margin: 0 -24px;
+    padding: 0 24px 16px 24px;
+    position: relative;
   }
 
   .ps-grid::-webkit-scrollbar {
@@ -2699,19 +2708,123 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
   }
 
   .ps-card {
-    min-width: 85vw !important;
+    min-width: 75vw !important;
+    max-width: 75vw !important;
     scroll-snap-align: center;
     flex-shrink: 0;
   }
 
-  /* Fix the hamburger menu visibility */
+  /* Scroll hint indicator for Products */
+  .ps-grid::after {
+    content: 'Swipe for more →';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.78rem;
+    color: var(--text-light);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  /* Add extra bottom margin to the parent section so hint text doesn't overlap */
+  #what-we-offer .ps-grid {
+    margin-bottom: 24px;
+  }
+
+  /* ---- Why Choose OutLand: single column on mobile ---- */
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .why-card {
+    padding: 28px 24px;
+  }
+
+  .why-card-large {
+    grid-column: span 1 !important;
+    text-align: left;
+  }
+
+  .why-list {
+    justify-content: flex-start !important;
+    gap: 16px !important;
+  }
+
+  /* ---- Gallery horizontal scroll on mobile ---- */
+  .gallery-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 16px !important;
+    -webkit-overflow-scrolling: touch;
+    grid-template-columns: none !important;
+    margin: 0 -24px;
+    padding: 0 24px 16px 24px;
+    position: relative;
+  }
+
+  .gallery-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+  .gallery-grid::-webkit-scrollbar-track {
+    background: var(--light-grey);
+    border-radius: 4px;
+  }
+  .gallery-grid::-webkit-scrollbar-thumb {
+    background: var(--blue-light);
+    border-radius: 4px;
+  }
+
+  .gallery-item {
+    min-width: 75vw !important;
+    max-width: 75vw !important;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  /* Scroll hint for Gallery */
+  .gallery-grid::after {
+    content: 'Swipe for more →';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.78rem;
+    color: var(--text-light);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  #gallery-preview .gallery-grid {
+    margin-bottom: 24px;
+  }
+
+  /* ---- Fix hamburger menu visibility ---- */
   .hamburger {
     display: flex !important;
-    margin-left: auto; /* force it to the right */
+    margin-left: auto;
   }
 
   .nav-logo {
     flex-shrink: 0;
+  }
+
+  /* Prevent nav-logo text from pushing hamburger off screen */
+  .nav-logo-text {
+    display: none;
+  }
+
+  .nav-logo img {
+    height: 50px;
   }
   
   /* Hide the navbar overlay to prevent invisible clickable areas */
@@ -2726,5 +2839,24 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     background: rgba(0,0,0,0.5);
     z-index: 998;
   }
+
+  /* Prevent any element from causing horizontal overflow */
+  .container,
+  .section,
+  .hero-v2,
+  .footer,
+  .cta-section,
+  .brands-grid,
+  .footer-grid {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* Brands grid fix */
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
 }
+
 
