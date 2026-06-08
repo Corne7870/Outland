@@ -262,4 +262,122 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ---- WhatsApp Floating Button ----
+  const waButton = document.createElement('a');
+  waButton.href = 'https://wa.me/27828028079';
+  waButton.className = 'whatsapp-float';
+  waButton.target = '_blank';
+  waButton.rel = 'noopener noreferrer';
+  waButton.ariaLabel = 'Chat with us on WhatsApp';
+  waButton.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.49.652.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.005-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+  `;
+  document.body.appendChild(waButton);
+
+  // ---- Custom Chatbot Button & Window ----
+  const botBtn = document.createElement('button');
+  botBtn.className = 'chatbot-float';
+  botBtn.ariaLabel = 'Open Chatbot';
+  botBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+      <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </svg>
+  `;
+  document.body.appendChild(botBtn);
+
+  const botWindow = document.createElement('div');
+  botWindow.className = 'chatbot-window';
+  botWindow.innerHTML = `
+    <div class="chatbot-header">
+      <h4>OutLand Assistant</h4>
+      <button class="chatbot-close" aria-label="Close Chat">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div class="chatbot-msg bot">Hi there! I know everything about OutLand Power and Turf. How can I help you today?</div>
+    </div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbot-input" placeholder="Type a message..." autocomplete="off">
+      <button id="chatbot-send">Send</button>
+    </div>
+  `;
+  document.body.appendChild(botWindow);
+
+  const messagesContainer = botWindow.querySelector('#chatbot-messages');
+  const inputField = botWindow.querySelector('#chatbot-input');
+  const sendBtn = botWindow.querySelector('#chatbot-send');
+  const closeBtn = botWindow.querySelector('.chatbot-close');
+
+  botBtn.addEventListener('click', () => {
+    botWindow.classList.toggle('active');
+    if (botWindow.classList.contains('active')) {
+      inputField.focus();
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    botWindow.classList.remove('active');
+  });
+
+  function addMessage(text, sender) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'chatbot-msg ' + sender;
+    msgDiv.textContent = text;
+    messagesContainer.appendChild(msgDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  function getBotResponse(userMsg) {
+    const msg = userMsg.toLowerCase();
+    if (msg.includes('contact') || msg.includes('phone') || msg.includes('email') || msg.includes('call')) {
+      return "You can call us at 082 802 8079 (General) or 079 211 3411 (Parts & Services), or email jean@outlandpt.co.za / parts@outlandpt.co.za. We're located at 9 Jakarand Street, Jeffreys Bay.";
+    }
+    if (msg.includes('hour') || msg.includes('time') || msg.includes('open') || msg.includes('close')) {
+      return "We are open Monday to Friday from 07:30 to 17:00, and Saturday from 08:00 to 12:00.";
+    }
+    if (msg.includes('brand')) {
+      return "We supply top brands including Husqvarna, Pellenc, Total Tools, Ultra Scooter, SAM, and Multi Power.";
+    }
+    if (msg.includes('service') || msg.includes('repair') || msg.includes('part') || msg.includes('fix')) {
+      return "We offer full after-sales support including equipment servicing, repairs, spare parts supply, technical advice, and diagnostic inspections.";
+    }
+    if (msg.includes('mower') || msg.includes('garden') || msg.includes('turf') || msg.includes('grass')) {
+      return "We have a big range of garden and turf equipment including lawnmowers, brushcutters, leaf blowers, and garden tractors. We also carry battery-powered options!";
+    }
+    if (msg.includes('chain') || msg.includes('tree') || msg.includes('forestry')) {
+      return "Our forestry equipment includes professional chainsaws, pole pruners, wood chippers, and clearing saws from trusted brands like Husqvarna.";
+    }
+    if (msg.includes('transport') || msg.includes('motorcycle') || msg.includes('scooter') || msg.includes('bike')) {
+      return "We offer everyday mobility options like motorcycles, electric scooters (Ultra Scooter), and utility vehicles for petrol, diesel, and electric transport.";
+    }
+    if (msg.includes('tool')) {
+      return "We stock power tools (cordless/battery & electric), hand tools, compressors, and workshop equipment from brands like Total Tools.";
+    }
+    if (msg.includes('used') || msg.includes('second hand')) {
+      return "Yes, we sell used items! Check out our 'Used Items' page for our latest inventory of pre-owned equipment.";
+    }
+    if (msg.includes('location') || msg.includes('where') || msg.includes('address')) {
+      return "We are based in Jeffreys Bay at 9 Jakarand Street, 6330.";
+    }
+    return "I'm still learning! But we offer outdoor power equipment, tools, transport solutions, and expert service. For detailed info, please contact us at 082 802 8079.";
+  }
+
+  function handleSend() {
+    const text = inputField.value.trim();
+    if (!text) return;
+    addMessage(text, 'user');
+    inputField.value = '';
+    
+    setTimeout(() => {
+      const reply = getBotResponse(text);
+      addMessage(reply, 'bot');
+    }, 500);
+  }
+
+  sendBtn.addEventListener('click', handleSend);
+  inputField.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleSend();
+  });
+
 });
