@@ -2686,13 +2686,13 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
-    scroll-snap-type: x mandatory;
     gap: 16px !important;
     -webkit-overflow-scrolling: touch;
     grid-template-columns: none !important;
     margin: 0 -24px;
     padding: 0 24px 16px 24px;
     position: relative;
+    touch-action: pan-x pan-y;
   }
 
   .ps-grid::-webkit-scrollbar {
@@ -2710,7 +2710,6 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
   .ps-card {
     min-width: 75vw !important;
     max-width: 75vw !important;
-    scroll-snap-align: center;
     flex-shrink: 0;
   }
 
@@ -2760,13 +2759,13 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
-    scroll-snap-type: x mandatory;
     gap: 16px !important;
     -webkit-overflow-scrolling: touch;
     grid-template-columns: none !important;
     margin: 0 -24px;
     padding: 0 24px 16px 24px;
     position: relative;
+    touch-action: pan-x pan-y;
   }
 
   .gallery-grid::-webkit-scrollbar {
@@ -2784,7 +2783,6 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
   .gallery-item {
     min-width: 75vw !important;
     max-width: 75vw !important;
-    scroll-snap-align: center;
     flex-shrink: 0;
   }
 
