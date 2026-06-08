@@ -2350,6 +2350,27 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     display: none;
   }
 
+  .navbar:not(.scrolled) .nav-links a {
+    color: var(--text-dark) !important;
+  }
+  .navbar:not(.scrolled) .nav-links a:hover,
+  .navbar:not(.scrolled) .nav-links a.active {
+    color: var(--green) !important;
+  }
+
+  .detailed-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .detailed-grid-rev {
+    direction: ltr !important;
+  }
+
+  .detailed-grid-rev > * {
+    direction: ltr !important;
+  }
+
   .ps-grid {
     grid-template-columns: 1fr;
   }
@@ -2658,6 +2679,12 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
   }
 }
 
+/* ---- Mobile-only CTA blocks (hidden on desktop) ---- */
+.mobile-ps-cta,
+.mobile-gallery-cta {
+  display: none;
+}
+
 /* ---- Mobile Layout Fixes ---- */
 @media (max-width: 768px) {
   html, body {
@@ -2671,6 +2698,31 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     display: none !important;
   }
 
+  /* ---- Navbar: show text but smaller ---- */
+  .nav-logo-text {
+    display: flex !important;
+  }
+
+  .logo-outland {
+    font-size: 1.2rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  .logo-sub {
+    font-size: 0.45rem !important;
+    letter-spacing: 2px !important;
+    margin-top: 2px !important;
+  }
+
+  .nav-logo img {
+    height: 45px;
+  }
+
+  .nav-logo {
+    gap: 8px !important;
+    flex-shrink: 0;
+  }
+
   /* ---- Who We Are Cards: stack all 3 vertically ---- */
   .who-we-are-cards {
     grid-template-columns: 1fr !important;
@@ -2681,57 +2733,138 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     padding: 24px 20px;
   }
 
-  /* ---- Products & Services horizontal scroll ---- */
+  /* ---- Products & Services: hide grid, show single CTA ---- */
   .ps-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 16px !important;
-    -webkit-overflow-scrolling: touch;
-    grid-template-columns: none !important;
-    margin: 0 -24px;
-    padding: 0 24px 16px 24px;
-    position: relative;
-    touch-action: pan-x pan-y;
+    display: none !important;
   }
 
-  .ps-grid::-webkit-scrollbar {
-    height: 6px;
-  }
-  .ps-grid::-webkit-scrollbar-track {
-    background: var(--light-grey);
-    border-radius: 4px;
-  }
-  .ps-grid::-webkit-scrollbar-thumb {
-    background: var(--blue-light);
-    border-radius: 4px;
+  .desktop-only-btn {
+    display: none !important;
   }
 
-  .ps-card {
-    min-width: 75vw !important;
-    max-width: 75vw !important;
-    flex-shrink: 0;
+  .mobile-ps-cta {
+    display: block !important;
+    text-decoration: none;
+    color: inherit;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    transition: all 0.35s ease;
+    margin-top: 8px;
   }
 
-  /* Scroll hint indicator for Products */
-  .ps-grid::after {
-    content: 'Swipe for more →';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.78rem;
+  .mobile-ps-cta:hover,
+  .mobile-ps-cta:active {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(27, 58, 92, 0.2);
+  }
+
+  .mobile-ps-cta-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .mobile-ps-cta-images img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .mobile-ps-cta-content {
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .mobile-ps-cta-content h3 {
+    font-size: 1.2rem;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+
+  .mobile-ps-cta-content p {
+    font-size: 0.88rem;
     color: var(--text-light);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-    pointer-events: none;
-    opacity: 0.7;
+    line-height: 1.6;
+    margin-bottom: 16px;
   }
 
-  /* Add extra bottom margin to the parent section so hint text doesn't overlap */
-  #what-we-offer .ps-grid {
-    margin-bottom: 24px;
+  .mobile-ps-cta-btn {
+    display: inline-block;
+    background: var(--green);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+  }
+
+  /* ---- Gallery: hide grid, show simple CTA ---- */
+  .desktop-gallery {
+    display: none !important;
+  }
+
+  .mobile-gallery-cta {
+    display: block !important;
+    text-decoration: none;
+    color: inherit;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    transition: all 0.35s ease;
+    margin-top: 8px;
+  }
+
+  .mobile-gallery-cta:hover,
+  .mobile-gallery-cta:active {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(27, 58, 92, 0.2);
+  }
+
+  .mobile-gallery-cta-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .mobile-gallery-cta-images img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .mobile-gallery-cta-content {
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .mobile-gallery-cta-content h3 {
+    font-size: 1.2rem;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+
+  .mobile-gallery-cta-content p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .mobile-gallery-cta-btn {
+    display: inline-block;
+    background: var(--blue);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 16px rgba(27, 58, 92, 0.3);
   }
 
   /* ---- Why Choose OutLand: single column on mobile ---- */
@@ -2754,75 +2887,10 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     gap: 16px !important;
   }
 
-  /* ---- Gallery horizontal scroll on mobile ---- */
-  .gallery-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 16px !important;
-    -webkit-overflow-scrolling: touch;
-    grid-template-columns: none !important;
-    margin: 0 -24px;
-    padding: 0 24px 16px 24px;
-    position: relative;
-    touch-action: pan-x pan-y;
-  }
-
-  .gallery-grid::-webkit-scrollbar {
-    height: 6px;
-  }
-  .gallery-grid::-webkit-scrollbar-track {
-    background: var(--light-grey);
-    border-radius: 4px;
-  }
-  .gallery-grid::-webkit-scrollbar-thumb {
-    background: var(--blue-light);
-    border-radius: 4px;
-  }
-
-  .gallery-item {
-    min-width: 75vw !important;
-    max-width: 75vw !important;
-    flex-shrink: 0;
-  }
-
-  /* Scroll hint for Gallery */
-  .gallery-grid::after {
-    content: 'Swipe for more →';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.78rem;
-    color: var(--text-light);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-    pointer-events: none;
-    opacity: 0.7;
-  }
-
-  #gallery-preview .gallery-grid {
-    margin-bottom: 24px;
-  }
-
   /* ---- Fix hamburger menu visibility ---- */
   .hamburger {
     display: flex !important;
     margin-left: auto;
-  }
-
-  .nav-logo {
-    flex-shrink: 0;
-  }
-
-  /* Prevent nav-logo text from pushing hamburger off screen */
-  .nav-logo-text {
-    display: none;
-  }
-
-  .nav-logo img {
-    height: 50px;
   }
   
   /* Hide the navbar overlay to prevent invisible clickable areas */
@@ -2856,5 +2924,6 @@ h3 { font-size: clamp(1.2rem, 3vw, 1.6rem); }
     gap: 16px !important;
   }
 }
+
 
 
