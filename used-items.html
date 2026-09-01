@@ -32,6 +32,7 @@
         <a href="used-items.html" class="active">Used Items</a>
         <a href="gallery.html">Gallery</a>
         <a href="reviews.html">Reviews</a>
+        <a href="specials.html">Specials</a>
         <a href="contact.html" class="nav-cta">Contact Us</a>
       </div>
       <div class="hamburger" id="hamburger">
@@ -66,12 +67,195 @@
     <div class="container">
       <div class="used-items-grid fade-in">
 
-        <!-- Empty State -->
-        <div class="used-items-empty">
-          <div class="used-items-empty-icon">🛠️</div>
-          <h3>No Used Items Currently Available</h3>
-          <p>We don't have any pre-owned items in stock right now, but new stock arrives regularly. Contact us to ask about upcoming availability or to be notified when new items come in.</p>
-          <a href="contact.html" class="btn btn-primary">Contact Us →</a>
+        <!-- Used Item -->
+        <div class="used-item-card">
+          <div class="used-item-badge">Used</div>
+          <div class="used-item-img" style="height: auto; max-height: 500px;">
+            <img src="images/used_bmw_f800gs.jpg" alt="2017 BMW F 800 GS ADVENTURE" style="object-fit: contain; object-position: top; background: #f0f2f5; height: 100%; cursor: pointer;" onclick="var g = document.getElementById('bmw-gallery'); if(g.style.display==='none'){g.style.display='grid'}else{g.style.display='none'}">
+          </div>
+          <div style="padding: 15px 28px 0; text-align: center;">
+            <button onclick="var g = document.getElementById('bmw-gallery'); if(g.style.display==='none'){g.style.display='grid'; this.innerText='Hide Pictures'}else{g.style.display='none'; this.innerText='View More Pictures'}" class="btn btn-outline" style="width: 100%; padding: 8px; font-size: 0.9rem;">View More Pictures</button>
+          </div>
+          <div id="bmw-gallery" style="display: none; padding: 15px 28px 20px; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/bmw_back.png" alt="BMW Back">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/bmw_side.jpg" alt="BMW Side">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/bmw_keys.png" alt="BMW Keys">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/bmw_dash.png" alt="BMW Dash">
+            </div>
+          </div>
+          <div class="used-item-body">
+            <h3>2017 BMW F 800 GS ADVENTURE</h3>
+            <p class="used-item-condition" style="color: #4a5568; margin-bottom: 12px;"><strong>Mileage:</strong> 26,035 km &nbsp;|&nbsp; <strong>Engine:</strong> 798cc Parallel-Twin</p>
+            <p style="margin-bottom: 24px;">6-Speed Transmission. Lots of extras, full service history. Finance available. Quality Pre-Owned, Ready to Ride.</p>
+            <div class="used-item-footer">
+              <span class="used-item-price">R122,500</span>
+              <a href="contact.html" class="btn btn-primary btn-sm">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Used Item - KTM -->
+        <div class="used-item-card">
+          <div class="used-item-badge">Used</div>
+          <div class="used-item-img" style="height: auto; max-height: 500px;">
+            <img src="images/used_ktm_50sx.jpg" alt="2019 KTM 50 SX" style="object-fit: contain; object-position: top; background: #f0f2f5; height: 100%; cursor: pointer;" onclick="var g = document.getElementById('ktm-gallery'); if(g.style.display==='none'){g.style.display='grid'}else{g.style.display='none'}">
+          </div>
+          <div style="padding: 15px 28px 0; text-align: center;">
+            <button onclick="var g = document.getElementById('ktm-gallery'); if(g.style.display==='none'){g.style.display='grid'; this.innerText='Hide Pictures'}else{g.style.display='none'; this.innerText='View More Pictures'}" class="btn btn-outline" style="width: 100%; padding: 8px; font-size: 0.9rem;">View More Pictures</button>
+          </div>
+          <div id="ktm-gallery" style="display: none; padding: 15px 28px 20px; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/ktm_back.png" alt="KTM Back">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/ktm_side.png" alt="KTM Side">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/ktm_dash.png" alt="KTM Dash">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/ktm_front.png" alt="KTM Front">
+            </div>
+          </div>
+          <div class="used-item-body">
+            <h3>2019 KTM 50 SX</h3>
+            <p class="used-item-condition" style="color: #4a5568; margin-bottom: 12px;"><strong>Hours:</strong> 43.1 &nbsp;|&nbsp; <strong>Engine:</strong> 49cc Liquid-cooled 2-Stroke</p>
+            <p style="margin-bottom: 24px;">Automatic Centrifugal Clutch, WP Suspension, Hydraulic Disc Brakes. Excellent condition — Race Ready! Perfect mini race bike.</p>
+            <div class="used-item-footer">
+              <span class="used-item-price">R35,000</span>
+              <a href="contact.html" class="btn btn-primary btn-sm">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Used Item - Honda -->
+        <div class="used-item-card">
+          <div class="used-item-badge">Used</div>
+          <div class="used-item-img" style="height: auto; max-height: 500px;">
+            <img src="images/used_honda_crf250l.jpg" alt="2015 HONDA CRF 250 L" style="object-fit: contain; object-position: top; background: #f0f2f5; height: 100%; cursor: pointer;" onclick="var g = document.getElementById('honda-gallery'); if(g.style.display==='none'){g.style.display='grid'}else{g.style.display='none'}">
+          </div>
+          <div style="padding: 15px 28px 0; text-align: center;">
+            <button onclick="var g = document.getElementById('honda-gallery'); if(g.style.display==='none'){g.style.display='grid'; this.innerText='Hide Pictures'}else{g.style.display='none'; this.innerText='View More Pictures'}" class="btn btn-outline" style="width: 100%; padding: 8px; font-size: 0.9rem;">View More Pictures</button>
+          </div>
+          <div id="honda-gallery" style="display: none; padding: 15px 28px 20px; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/honda_front.jpg" alt="Honda Front">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/honda_side.jpg" alt="Honda Side">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/honda_dash.png" alt="Honda Dash">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/honda_engine_1.png" alt="Honda Engine Left">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/honda_engine_2.png" alt="Honda Engine Right">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/honda_wheel.png" alt="Honda Front Wheel">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none; grid-column: span 2;">
+              <img src="images/honda_rear_wheel.png" alt="Honda Rear Wheel">
+            </div>
+          </div>
+          <div class="used-item-body">
+            <h3>2015 HONDA CRF 250 L</h3>
+            <p class="used-item-condition" style="color: #4a5568; margin-bottom: 12px;"><strong>Mileage:</strong> 27,900 km &nbsp;|&nbsp; <strong>Engine:</strong> 249cc 4-Stroke DOHC</p>
+            <p style="margin-bottom: 24px;">Electric Start, 6-Speed, Long-travel Suspension. Perfect for dual sport, commuting & light adventure. Well maintained in excellent condition!</p>
+            <div class="used-item-footer">
+              <span class="used-item-price">R59,990</span>
+              <a href="contact.html" class="btn btn-primary btn-sm">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Used Item - Roamer -->
+        <div class="used-item-card">
+          <div class="used-item-badge">Used</div>
+          <div class="used-item-img" style="height: auto; max-height: 500px;">
+            <img src="images/used_roamer_180f.jpg" alt="ROAMER 180F" style="object-fit: contain; object-position: top; background: #f0f2f5; height: 100%; cursor: pointer;" onclick="var g = document.getElementById('roamer-gallery'); if(g.style.display==='none'){g.style.display='grid'}else{g.style.display='none'}">
+          </div>
+          <div style="padding: 15px 28px 0; text-align: center;">
+            <button onclick="var g = document.getElementById('roamer-gallery'); if(g.style.display==='none'){g.style.display='grid'; this.innerText='Hide Pictures'}else{g.style.display='none'; this.innerText='View More Pictures'}" class="btn btn-outline" style="width: 100%; padding: 8px; font-size: 0.9rem;">View More Pictures</button>
+          </div>
+          <div id="roamer-gallery" style="display: none; padding: 15px 28px 20px; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/roamer_side_left.jpg" alt="Roamer Side Left">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/roamer_side_right.jpg" alt="Roamer Side Right">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/roamer_front_side.jpg" alt="Roamer Front Side">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/roamer_front.jpg" alt="Roamer Front">
+            </div>
+          </div>
+          <div class="used-item-body">
+            <h3>ROAMER 180F</h3>
+            <p class="used-item-condition" style="color: #4a5568; margin-bottom: 12px;"><strong>Engine:</strong> 178cc 4-Stroke GY6 &nbsp;|&nbsp; <strong>Clutch:</strong> CVT w/ Reverse</p>
+            <p style="margin-bottom: 24px;">Electric Start, 60km/h Max Speed, 165kg Max Rider Weight. Excellent condition, ready for on-road and off-road adventures!</p>
+            <div class="used-item-footer">
+              <span class="used-item-price">R25,500</span>
+              <a href="contact.html" class="btn btn-primary btn-sm">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+		<!-- Used Item - Victory -->
+        <div class="used-item-card">
+          <div class="used-item-badge">Used</div>
+          <div class="used-item-img" style="height: auto; max-height: 500px;">
+            <img src="images/victory_primary.jpeg" alt="2008 VICTORY JACKPOT" style="object-fit: contain; object-position: top; background: #f0f2f5; height: 100%; cursor: pointer;" onclick="var g = document.getElementById('victory-gallery'); if(g.style.display==='none'){g.style.display='grid'}else{g.style.display='none'}">
+          </div>
+          <div style="padding: 15px 28px 0; text-align: center;">
+            <button onclick="var g = document.getElementById('victory-gallery'); if(g.style.display==='none'){g.style.display='grid'; this.innerText='Hide Pictures'}else{g.style.display='none'; this.innerText='View More Pictures'}" class="btn btn-outline" style="width: 100%; padding: 8px; font-size: 0.9rem;">View More Pictures</button>
+          </div>
+          <div id="victory-gallery" style="display: none; padding: 15px 28px 20px; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/victory_engine.jpeg" alt="Victory Engine Close-Up">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/victory_rear.jpeg" alt="Victory Rear View">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/victory_exhaust.jpeg" alt="Victory Exhaust View">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/victory_odo.jpeg" alt="Victory Odometer">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/victory_side1.jpeg" alt="Victory Side View 1">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none;">
+              <img src="images/victory_side2.jpeg" alt="Victory Side View 2">
+            </div>
+            <div class="gallery-item" style="border-radius: 6px; box-shadow: none; grid-column: span 2;">
+              <video width="100%" controls style="border-radius: 6px;">
+                <source src="images/victory_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="used-item-body">
+            <h3>2008 VICTORY JACKPOT</h3>
+            <p class="used-item-condition" style="color: #4a5568; margin-bottom: 12px;"><strong>Mileage:</strong> 62,142 km &nbsp;|&nbsp; <strong>Engine:</strong> 1634cc Freedom V-Twin EFI</p>
+            <p style="margin-bottom: 24px;">6-Speed Transmission. Custom exhaust system, panniers & sissy bar included, wide rear tyre styling. A factory custom cruiser combining power, comfort, and unmistakable American style. Excellent condition — ready for the open road!</p>
+            <div class="used-item-footer">
+              <span class="used-item-price">R129,000</span>
+              <a href="contact.html" class="btn btn-primary btn-sm">Enquire →</a>
+            </div>
+          </div>
         </div>
 
         <!--
@@ -128,7 +312,8 @@
             <li><a href="products.html">Products &amp; Services</a></li>
             <li><a href="used-items.html">Used Items</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="reviews.html">Reviews</a>
+        <a href="specials.html">Specials</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -173,6 +358,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-nav lightbox-prev">&#8249;</span>
+    <span class="lightbox-nav lightbox-next">&#8250;</span>
+    <img src="images/used_bmw_f800gs.jpg" alt="Gallery Image">
+  </div>
 
   <script src="main.js"></script>
 </body>
