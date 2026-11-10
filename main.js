@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     body.style.overflow = '';
   }
 
-  if (lightbox) {
+  if (lightbox && galleryImages.length > 0) {
     const closeBtn = lightbox.querySelector('.lightbox-close');
     const prevBtn = lightbox.querySelector('.lightbox-prev');
     const nextBtn = lightbox.querySelector('.lightbox-next');
